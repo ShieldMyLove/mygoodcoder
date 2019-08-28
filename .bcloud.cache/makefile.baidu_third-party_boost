@@ -1,0 +1,615 @@
+.SILENT:
+
+#
+#makefile-self location, must be always on the top!!!
+#
+MAKEFILE_PATH_BAIDU_THIRD-PARTY_BOOST := $(word $(words $(MAKEFILE_LIST)), $(MAKEFILE_LIST))
+MAKEFILE_DIR_BAIDU_THIRD-PARTY_BOOST := $(shell cd $(dir $(MAKEFILE_PATH_BAIDU_THIRD-PARTY_BOOST)) && pwd)
+
+MAKEFILE_BAIDU_THIRD-PARTY_BOOST := 'imported'
+
+#
+#Global Configs
+#
+WORK_ROOT := $(shell cd $(MAKEFILE_DIR_BAIDU_THIRD-PARTY_BOOST)/../../../.. && pwd)
+GCC_PATH := /opt/compiler/gcc-4.8.2/bin
+
+#
+#import global configs
+#
+ifneq ($(MAKEFILE_CONFIG), 'imported')
+    include $(MAKEFILE_DIR_BAIDU_THIRD-PARTY_BOOST)/makefile.config
+endif
+
+baidu/third-party/boost_deps:\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_atomic.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_type_erasure.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_contract.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_python27.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_serialization.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_date_time.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_wserialization.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_iostreams.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_filesystem.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_log_setup.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_graph.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_exception.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_regex.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_context.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_locale.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_log.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_system.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_container.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_chrono.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_fiber_numa.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1l.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99l.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_program_options.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_random.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_fiber.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99f.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_coroutine.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_wave.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_thread.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1f.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_timer.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1.a\
+		$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99.a\
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_atomic.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_atomic.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_atomic.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_atomic.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_atomic.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_type_erasure.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_type_erasure.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_type_erasure.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_type_erasure.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_type_erasure.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_contract.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_contract.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_contract.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_contract.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_contract.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_python27.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_python27.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_python27.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_python27.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_python27.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_serialization.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_serialization.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_serialization.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_serialization.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_serialization.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_date_time.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_date_time.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_date_time.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_date_time.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_date_time.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_wserialization.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_wserialization.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_wserialization.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_wserialization.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_wserialization.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_stacktrace_addr2line.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_stacktrace_addr2line.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_iostreams.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_iostreams.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_iostreams.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_iostreams.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_iostreams.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_filesystem.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_filesystem.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_filesystem.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_filesystem.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_filesystem.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_log_setup.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_log_setup.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_log_setup.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_log_setup.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_log_setup.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_graph.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_graph.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_graph.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_graph.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_graph.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_exception.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_exception.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_exception.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_exception.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_exception.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_regex.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_regex.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_regex.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_regex.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_regex.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_context.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_context.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_context.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_context.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_context.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_locale.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_locale.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_locale.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_locale.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_locale.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_log.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_log.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_log.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_log.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_log.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_unit_test_framework.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_unit_test_framework.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_system.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_system.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_system.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_system.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_system.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_container.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_container.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_container.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_container.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_container.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_stacktrace_basic.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_stacktrace_basic.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_chrono.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_chrono.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_chrono.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_chrono.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_chrono.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_fiber_numa.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_fiber_numa.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_fiber_numa.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_fiber_numa.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_fiber_numa.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1l.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_math_tr1l.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_math_tr1l.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1l.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1l.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99l.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_math_c99l.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_math_c99l.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_math_c99l.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99l.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_program_options.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_program_options.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_program_options.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_program_options.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_program_options.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_test_exec_monitor.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_test_exec_monitor.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_random.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_random.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_random.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_random.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_random.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_fiber.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_fiber.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_fiber.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_fiber.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_fiber.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99f.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_math_c99f.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_math_c99f.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_math_c99f.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99f.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_coroutine.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_coroutine.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_coroutine.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_coroutine.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_coroutine.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_stacktrace_noop.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_stacktrace_noop.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_prg_exec_monitor.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_prg_exec_monitor.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_wave.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_wave.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_wave.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_wave.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_wave.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_thread.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_thread.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_thread.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_thread.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_thread.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1f.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_math_tr1f.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_math_tr1f.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1f.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1f.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_timer.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_timer.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_timer.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_timer.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_timer.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_math_tr1.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_math_tr1.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_math_tr1.a'
+
+$(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99.a:$(WORK_ROOT)/baidu/third-party/boost/lib/libboost_math_c99.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/boost/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/boost/lib/libboost_math_c99.a \
+		bc_out/baidu/third-party/boost/output/lib/libboost_math_c99.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/boost/output/lib/libboost_math_c99.a'
+
+
+
+#
+#import dependency modules
+#

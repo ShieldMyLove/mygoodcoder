@@ -1,0 +1,721 @@
+[2019-08-28 12:09:29] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 12:09:33] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 12:09:35] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 12:09:36] [INFO] [32mDownloading source repos, total 2 ...[0m
+[2019-08-28 12:09:38] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 12:09:38] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 12:09:38] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 12:09:38] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 12:09:38] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 12:09:38] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 12:09:38] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 12:09:38] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 12:09:38] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 12:09:38] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 12:09:38] [INFO] [32m[Stage-1/3] GenSources takes : 0.061s[0m
+[2019-08-28 12:09:38] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 12:09:38] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.059s[0m
+[2019-08-28 12:09:38] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 12:09:38] [INFO] [32m[Stage-3/3] Publish header files takes : 0.265s[0m
+[2019-08-28 12:09:38] [INFO] [32m=========== Preprocess total takes : 0.425s[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/parser_test[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/glog/output/lib/libglog.a[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest_main.a[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest.a[0m
+[2019-08-28 12:09:38] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dictparse.cpp.o[0m
+[2019-08-28 12:09:38] [ERROR] [31mFail to analyze target: /home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o, error: 
+In file included from baidu/goodcoder/liuyuan21/src/dict_handle.cpp:9:0:
+baidu/goodcoder/liuyuan21/src/dict_handle.h:13:55: fatal error: boost/algorithm/string/classification.hpp: No such file or directory
+ #include <boost/algorithm/string/classification.hpp>  
+                                                       ^
+compilation terminated.
+:
+/opt/compiler/gcc-4.8.2/bin/g++ -M baidu/goodcoder/liuyuan21/src/dict_handle.cpp -Ibaidu/goodcoder/liuyuan21 -Ibaidu/goodcoder/liuyuan21/src -Ibaidu/goodcoder/liuyuan21/src/test -Ibc_out/baidu/goodcoder/liuyuan21/output/include -Ibc_out/third-64/glog/output/include -Ibc_out/third-64/gtest/output/include -DBCLOUD -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -DVERSION=\"1d5fc68b75dc5cd3220e2813b9e894a088237f0e\" -g -pipe -W -Wall -fPIC -std=c++11[0m
+[2019-08-28 12:09:38] [ERROR] [31mFail to analyze target: /home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dict_handle.cpp.o, error: 
+In file included from baidu/goodcoder/liuyuan21/src/dict_handle.cpp:9:0:
+baidu/goodcoder/liuyuan21/src/dict_handle.h:13:55: fatal error: boost/algorithm/string/classification.hpp: No such file or directory
+ #include <boost/algorithm/string/classification.hpp>  
+                                                       ^
+compilation terminated.
+:
+/opt/compiler/gcc-4.8.2/bin/g++ -M baidu/goodcoder/liuyuan21/src/dict_handle.cpp -Ibaidu/goodcoder/liuyuan21 -Ibaidu/goodcoder/liuyuan21/src -Ibaidu/goodcoder/liuyuan21/src/test -Ibc_out/baidu/goodcoder/liuyuan21/output/include -Ibc_out/third-64/glog/output/include -Ibc_out/third-64/gtest/output/include -DBCLOUD -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -DVERSION=\"1d5fc68b75dc5cd3220e2813b9e894a088237f0e\" -g -pipe -W -Wall -fPIC -std=c++11[0m
+[2019-08-28 12:09:38] [ERROR] [31mFail to analyze target: /home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dictparse.cpp.o, error: 
+baidu/goodcoder/liuyuan21/src/dictparse.cpp:14:30: fatal error: boost/function.hpp: No such file or directory
+ #include <boost/function.hpp>
+                              ^
+compilation terminated.
+:
+/opt/compiler/gcc-4.8.2/bin/g++ -M baidu/goodcoder/liuyuan21/src/dictparse.cpp -Ibaidu/goodcoder/liuyuan21 -Ibaidu/goodcoder/liuyuan21/src -Ibaidu/goodcoder/liuyuan21/src/test -Ibc_out/baidu/goodcoder/liuyuan21/output/include -Ibc_out/third-64/glog/output/include -Ibc_out/third-64/gtest/output/include -DBCLOUD -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -DVERSION=\"1d5fc68b75dc5cd3220e2813b9e894a088237f0e\" -g -pipe -W -Wall -fPIC -std=c++11[0m
+[2019-08-28 12:09:38] [ERROR] [31mFail to analyze target: /home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o, error: 
+baidu/goodcoder/liuyuan21/src/dictparse.cpp:14:30: fatal error: boost/function.hpp: No such file or directory
+ #include <boost/function.hpp>
+                              ^
+compilation terminated.
+:
+/opt/compiler/gcc-4.8.2/bin/g++ -M baidu/goodcoder/liuyuan21/src/dictparse.cpp -Ibaidu/goodcoder/liuyuan21 -Ibaidu/goodcoder/liuyuan21/src -Ibaidu/goodcoder/liuyuan21/src/test -Ibc_out/baidu/goodcoder/liuyuan21/output/include -Ibc_out/third-64/glog/output/include -Ibc_out/third-64/gtest/output/include -DBCLOUD -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -DVERSION=\"1d5fc68b75dc5cd3220e2813b9e894a088237f0e\" -g -pipe -W -Wall -fPIC -std=c++11[0m
+[2019-08-28 14:45:19] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 14:45:20] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 14:45:23] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 14:45:24] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 14:45:24] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 14:45:24] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 14:45:56] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 14:45:56] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 14:45:56] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 14:45:56] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 14:45:56] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 14:45:56] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 14:45:56] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 14:45:56] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 14:45:56] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 14:45:56] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 14:45:56] [INFO] [32m[Stage-1/3] GenSources takes : 0.072s[0m
+[2019-08-28 14:45:56] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 14:45:56] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.063s[0m
+[2019-08-28 14:45:56] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 14:45:57] [INFO] [32m[Stage-3/3] Publish header files takes : 0.764s[0m
+[2019-08-28 14:45:57] [INFO] [32m=========== Preprocess total takes : 0.969s[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/parser_test[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_atomic.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_type_erasure.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest_main.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_contract.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_serialization.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_python27.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wserialization.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_date_time.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_iostreams.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_filesystem.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log_setup.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_exception.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_regex.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_context.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_locale.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_system.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_container.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_chrono.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber_numa.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1l.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99l.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_program_options.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dictparse.cpp.o[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_random.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99f.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_coroutine.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_graph.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wave.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_thread.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1f.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_timer.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/glog/output/lib/libglog.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99.a[0m
+[2019-08-28 14:45:57] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1.a[0m
+[2019-08-28 14:45:57] [ERROR] [31mFail to analyze target: /home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dictparse.cpp.o, error: 
+baidu/goodcoder/liuyuan21/src/dictparse.cpp:18:27: fatal error: ParseUserType.h: No such file or directory
+ #include "ParseUserType.h"
+                           ^
+compilation terminated.
+:
+/opt/compiler/gcc-4.8.2/bin/g++ -M baidu/goodcoder/liuyuan21/src/dictparse.cpp -Ibaidu/goodcoder/liuyuan21 -Ibaidu/goodcoder/liuyuan21/src -Ibaidu/goodcoder/liuyuan21/src/test -Ibc_out/baidu/goodcoder/liuyuan21/output/include -Ibc_out/third-64/boost/output/include -Ibc_out/third-64/glog/output/include -Ibc_out/third-64/gtest/output/include -DBCLOUD -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -DVERSION=\"1d5fc68b75dc5cd3220e2813b9e894a088237f0e\" -g -pipe -W -Wall -fPIC -std=c++11[0m
+[2019-08-28 14:45:57] [ERROR] [31mFail to analyze target: /home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o, error: 
+baidu/goodcoder/liuyuan21/src/dictparse.cpp:18:27: fatal error: ParseUserType.h: No such file or directory
+ #include "ParseUserType.h"
+                           ^
+compilation terminated.
+:
+/opt/compiler/gcc-4.8.2/bin/g++ -M baidu/goodcoder/liuyuan21/src/dictparse.cpp -Ibaidu/goodcoder/liuyuan21 -Ibaidu/goodcoder/liuyuan21/src -Ibaidu/goodcoder/liuyuan21/src/test -Ibc_out/baidu/goodcoder/liuyuan21/output/include -Ibc_out/third-64/boost/output/include -Ibc_out/third-64/glog/output/include -Ibc_out/third-64/gtest/output/include -DBCLOUD -D_GNU_SOURCE -D__STDC_LIMIT_MACROS -DVERSION=\"1d5fc68b75dc5cd3220e2813b9e894a088237f0e\" -g -pipe -W -Wall -fPIC -std=c++11[0m
+[2019-08-28 14:50:42] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 14:50:43] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 14:50:44] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 14:50:44] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 14:50:45] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 14:50:45] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 14:50:45] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 14:50:46] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 14:50:46] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 14:50:46] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 14:50:46] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 14:50:46] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 14:50:46] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 14:50:46] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 14:50:46] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 14:50:46] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 14:50:46] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 14:50:46] [INFO] [32m[Stage-1/3] GenSources takes : 0.097s[0m
+[2019-08-28 14:50:46] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 14:50:46] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.085s[0m
+[2019-08-28 14:50:46] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 14:50:47] [INFO] [32m[Stage-3/3] Publish header files takes : 1.055s[0m
+[2019-08-28 14:50:47] [INFO] [32m=========== Preprocess total takes : 1.298s[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/parser_test[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_atomic.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_type_erasure.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest_main.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_contract.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_python27.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_serialization.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_date_time.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wserialization.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_iostreams.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_filesystem.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log_setup.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_exception.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_regex.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_context.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_locale.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_system.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_container.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_chrono.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber_numa.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1l.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99l.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dictparse.cpp.o[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_random.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_program_options.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99f.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_coroutine.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_graph.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wave.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_thread.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1f.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_timer.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/glog/output/lib/libglog.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99.a[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o[0m
+[2019-08-28 14:50:47] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o[0m
+[2019-08-28 14:50:48] [INFO] [32mCreate makefile successfully, use 2.322s[0m
+[2019-08-28 14:53:30] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 14:53:35] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 14:53:36] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 14:53:37] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 14:53:37] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 14:53:37] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 14:53:37] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 14:53:38] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 14:53:38] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 14:53:38] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 14:53:38] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 14:53:38] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 14:53:38] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 14:53:38] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 14:53:38] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 14:53:38] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 14:53:38] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 14:53:38] [INFO] [32m[Stage-1/3] GenSources takes : 0.071s[0m
+[2019-08-28 14:53:38] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 14:53:38] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.061s[0m
+[2019-08-28 14:53:38] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 14:53:39] [INFO] [32m[Stage-3/3] Publish header files takes : 1.093s[0m
+[2019-08-28 14:53:39] [INFO] [32m=========== Preprocess total takes : 1.284s[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/parser_test[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_atomic.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_type_erasure.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest_main.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_contract.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_python27.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_serialization.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_parser_test_ut_app_test_ParseUserType.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wserialization.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_date_time.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_iostreams.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_filesystem.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_exception.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log_setup.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_regex.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_context.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_locale.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_system.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_container.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber_numa.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1l.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_chrono.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99l.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_program_options.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_graph.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99f.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_parser_test_ut_app_dictparse.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_parser_test_ut_app_test_util.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_coroutine.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_random.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wave.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_thread.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1f.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_timer.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_parser_test_ut_app_test_dict_handle.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/glog/output/lib/libglog.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99.a[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_parser_test_ut_app_test_UserDefinedType.cpp.o[0m
+[2019-08-28 14:53:39] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_parser_test_ut_app_test_ParseCommType.cpp.o[0m
+[2019-08-28 14:53:40] [INFO] [32mCreate makefile successfully, use 2.761s[0m
+[2019-08-28 15:06:54] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 15:06:59] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 15:07:00] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 15:07:01] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 15:07:01] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 15:07:01] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 15:07:01] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 15:07:02] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 15:07:02] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 15:07:02] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 15:07:02] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:07:02] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 15:07:02] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:07:02] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 15:07:02] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 15:07:02] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 15:07:02] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 15:07:02] [INFO] [32m[Stage-1/3] GenSources takes : 0.069s[0m
+[2019-08-28 15:07:02] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 15:07:02] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.060s[0m
+[2019-08-28 15:07:02] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 15:07:03] [INFO] [32m[Stage-3/3] Publish header files takes : 1.249s[0m
+[2019-08-28 15:07:03] [INFO] [32m=========== Preprocess total takes : 1.437s[0m
+[2019-08-28 15:07:03] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp[0m
+[2019-08-28 15:07:03] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp[0m
+[2019-08-28 15:07:03] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp[0m
+[2019-08-28 15:07:03] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp[0m
+[2019-08-28 15:07:03] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:07:03] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 15:07:03] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:07:03] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:07:03] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:07:03] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_util.cpp[0m
+[2019-08-28 15:07:03] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_util.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:11:11] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 15:11:16] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 15:11:17] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 15:11:17] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 15:11:17] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 15:11:18] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 15:11:18] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 15:11:18] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 15:11:18] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 15:11:18] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 15:11:18] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:11:18] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 15:11:18] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:11:18] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 15:11:18] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 15:11:18] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 15:11:18] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 15:11:18] [INFO] [32m[Stage-1/3] GenSources takes : 0.071s[0m
+[2019-08-28 15:11:18] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 15:11:18] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.063s[0m
+[2019-08-28 15:11:18] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 15:11:19] [INFO] [32m[Stage-3/3] Publish header files takes : 1.140s[0m
+[2019-08-28 15:11:19] [INFO] [32m=========== Preprocess total takes : 1.335s[0m
+[2019-08-28 15:11:19] [ERROR] [31mGet compile target infos in module baidu/goodcoder/liuyuan21 error: [Error:6050] Found duplicate target (src/user_defined_type.h) in baidu/goodcoder/liuyuan21/BCLOUD. The duplicate source file is (src/user_defined_type.h)
+How to fix:
+	http://wenda.baidu.com/ask/question/57464[0m
+[2019-08-28 15:13:09] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 15:13:10] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 15:13:11] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 15:13:11] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 15:13:11] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 15:13:12] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 15:13:12] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 15:13:12] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 15:13:12] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 15:13:12] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 15:13:12] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:13:12] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 15:13:12] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:13:12] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 15:13:12] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 15:13:12] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 15:13:12] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 15:13:12] [INFO] [32m[Stage-1/3] GenSources takes : 0.072s[0m
+[2019-08-28 15:13:12] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 15:13:12] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.062s[0m
+[2019-08-28 15:13:12] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 15:13:13] [INFO] [32m[Stage-3/3] Publish header files takes : 1.024s[0m
+[2019-08-28 15:13:13] [INFO] [32m=========== Preprocess total takes : 1.215s[0m
+[2019-08-28 15:13:13] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp[0m
+[2019-08-28 15:13:13] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp[0m
+[2019-08-28 15:13:13] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp[0m
+[2019-08-28 15:13:13] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:13:13] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp[0m
+[2019-08-28 15:13:13] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:13:13] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_util.cpp[0m
+[2019-08-28 15:13:13] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:13:13] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:13:13] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_util.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:02] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 15:14:06] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 15:14:07] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 15:14:08] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 15:14:08] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 15:14:08] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 15:14:08] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 15:14:08] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 15:14:08] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 15:14:08] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 15:14:08] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:14:08] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 15:14:08] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:14:08] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 15:14:08] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 15:14:08] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 15:14:08] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 15:14:09] [INFO] [32m[Stage-1/3] GenSources takes : 0.071s[0m
+[2019-08-28 15:14:09] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 15:14:09] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.065s[0m
+[2019-08-28 15:14:09] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 15:14:10] [INFO] [32m[Stage-3/3] Publish header files takes : 0.994s[0m
+[2019-08-28 15:14:10] [INFO] [32m=========== Preprocess total takes : 1.200s[0m
+[2019-08-28 15:14:10] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp[0m
+[2019-08-28 15:14:10] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp[0m
+[2019-08-28 15:14:10] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp[0m
+[2019-08-28 15:14:10] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp[0m
+[2019-08-28 15:14:10] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:10] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_util.cpp[0m
+[2019-08-28 15:14:10] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 15:14:10] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_util.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:10] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:10] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:10] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:38] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 15:14:41] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 15:14:42] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 15:14:42] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 15:14:42] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 15:14:42] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 15:14:43] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 15:14:43] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 15:14:43] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 15:14:43] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 15:14:43] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:14:43] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 15:14:43] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:14:43] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 15:14:43] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 15:14:43] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 15:14:43] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 15:14:43] [INFO] [32m[Stage-1/3] GenSources takes : 0.072s[0m
+[2019-08-28 15:14:43] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 15:14:43] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.067s[0m
+[2019-08-28 15:14:43] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 15:14:45] [INFO] [32m[Stage-3/3] Publish header files takes : 1.280s[0m
+[2019-08-28 15:14:45] [INFO] [32m=========== Preprocess total takes : 1.490s[0m
+[2019-08-28 15:14:45] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp[0m
+[2019-08-28 15:14:45] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp[0m
+[2019-08-28 15:14:45] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_UserDefinedType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:45] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseUserType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:45] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp[0m
+[2019-08-28 15:14:45] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp[0m
+[2019-08-28 15:14:45] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_dict_handle.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:14:45] [ERROR] [31mAnalyzing target [/home/liuyuan21/bc_out/baidu/goodcoder/liuyuan21/output/test/src/test/test_ParseCommType.cpp] failed:'delete_libs'[0m
+[2019-08-28 15:15:22] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 15:15:26] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 15:15:27] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 15:15:27] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 15:15:27] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 15:15:27] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 15:15:28] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 15:15:28] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 15:15:28] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 15:15:28] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 15:15:28] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:15:28] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 15:15:28] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:15:28] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 15:15:28] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 15:15:28] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 15:15:28] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 15:15:28] [INFO] [32m[Stage-1/3] GenSources takes : 0.070s[0m
+[2019-08-28 15:15:28] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 15:15:28] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.067s[0m
+[2019-08-28 15:15:28] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 15:15:29] [INFO] [32m[Stage-3/3] Publish header files takes : 1.106s[0m
+[2019-08-28 15:15:29] [INFO] [32m=========== Preprocess total takes : 1.308s[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_ParseCommType[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_util[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_dict_handle[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_ParseUserType[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_UserDefinedType[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_atomic.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_type_erasure.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest_main.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_contract.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_python27.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_serialization.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wserialization.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_date_time.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1l.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/glog/output/lib/libglog.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_iostreams.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_dict_handle_ut_app_test_dict_handle.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_filesystem.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log_setup.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_exception.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_context.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_regex.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_locale.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_system.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_container.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_util_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_UserDefinedType_ut_app_test_UserDefinedType.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_chrono.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber_numa.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_ParseUserType_ut_app_test_ParseUserType.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_util_ut_app_dictparse.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99l.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_program_options.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseUserType_ut_app_dictparse.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_util_ut_app_test_util.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99f.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseUserType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_random.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_coroutine.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_graph.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_dict_handle_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_thread.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_UserDefinedType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wave.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1f.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_timer.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_dict_handle_ut_app_dictparse.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99.a[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_UserDefinedType_ut_app_dictparse.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseCommType_ut_app_dictparse.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_ParseCommType_ut_app_test_ParseCommType.cpp.o[0m
+[2019-08-28 15:15:30] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseCommType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:15:31] [INFO] [32mCreate makefile successfully, use 3.190s[0m
+[2019-08-28 15:21:52] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 15:21:52] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 15:21:54] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 15:21:54] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 15:21:54] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 15:21:54] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 15:21:54] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 15:21:55] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 15:21:55] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 15:21:55] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 15:21:55] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:21:55] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 15:21:55] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 15:21:55] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 15:21:55] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 15:21:55] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 15:21:55] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 15:21:55] [INFO] [32m[Stage-1/3] GenSources takes : 0.110s[0m
+[2019-08-28 15:21:55] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 15:21:55] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.069s[0m
+[2019-08-28 15:21:55] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 15:21:56] [INFO] [32m[Stage-3/3] Publish header files takes : 1.312s[0m
+[2019-08-28 15:21:56] [INFO] [32m=========== Preprocess total takes : 1.549s[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_ParseCommType[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_util[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_dict_handle[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_ParseUserType[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_UserDefinedType[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_atomic.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_type_erasure.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest_main.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_contract.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_python27.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_serialization.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_date_time.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wserialization.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1l.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_iostreams.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_filesystem.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log_setup.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_dict_handle_ut_app_test_dict_handle.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99f.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_exception.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_regex.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_context.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_locale.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_util_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_ParseCommType_ut_app_test_ParseCommType.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/demo/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_system.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_ParseUserType_ut_app_test_ParseUserType.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_container.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_UserDefinedType_ut_app_test_UserDefinedType.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_chrono.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99l.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/test/baidu_goodcoder_liuyuan21_test_util_ut_app_test_util.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber_numa.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_program_options.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_coroutine.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_random.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseCommType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseUserType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_graph.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wave.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_UserDefinedType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_dict_handle_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_thread.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1f.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_timer.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/glog/output/lib/libglog.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1.a[0m
+[2019-08-28 15:21:56] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99.a[0m
+[2019-08-28 15:21:58] [INFO] [32mCreate makefile successfully, use 3.007s[0m
+[2019-08-28 16:06:03] [INFO] [32mTry to update client ...[0m
+[2019-08-28 16:06:08] [INFO] [32mbcloud client updated successfully![0m
+[2019-08-28 16:06:08] [WARNING] [33mNo username is specified, will use the default user(liuyuan21) information logined locally[0m
+[2019-08-28 16:06:12] [INFO] [32mAnalyzing module dependency ...[0m
+[2019-08-28 16:06:13] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/boost/BCLOUD[0m
+[2019-08-28 16:06:14] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/gtest/BCLOUD[0m
+[2019-08-28 16:06:14] [INFO] [32mLoading deps info from local file ../../../baidu/third-party/glog/BCLOUD[0m
+[2019-08-28 16:06:14] [INFO] [32mChecking branch/tag name ...[0m
+[2019-08-28 16:06:14] [INFO] [32mDownloading source repos, total 3 ...[0m
+[2019-08-28 16:06:14] [INFO] [32mCopying user specified bcloud file ...[0m
+[2019-08-28 16:06:14] [INFO] [32mDownloading BCLOUD patch file ...[0m
+[2019-08-28 16:06:14] [INFO] [32m########################################### Module Info ############################################[0m
+[2019-08-28 16:06:14] [INFO] [32mURL       : ssh://icode.baidu.com:8235/baidu/goodcoder/liuyuan21[0m
+[2019-08-28 16:06:14] [INFO] [32mWorkroot  : /home/liuyuan21[0m
+[2019-08-28 16:06:14] [INFO] [32mModule    : baidu/goodcoder/liuyuan21[0m
+[2019-08-28 16:06:14] [INFO] [32mUser      : liuyuan21[0m
+[2019-08-28 16:06:14] [INFO] [32mClient OS : centos6u3
+[0m
+[2019-08-28 16:06:14] [INFO] [32m=========== Preprocess [TaskID: LOCAL, Module: baidu/goodcoder/liuyuan21] ======================[0m
+[2019-08-28 16:06:14] [INFO] [32m[Stage-1/3] Handling Stage >>> [GenSources] ...[0m
+[2019-08-28 16:06:15] [INFO] [32m[Stage-1/3] GenSources takes : 0.077s[0m
+[2019-08-28 16:06:15] [INFO] [32m[Stage-2/3] Handling Stage >>> [Proto&IDL] ...[0m
+[2019-08-28 16:06:15] [INFO] [32m[Stage-2/3] Proto&IDL takes : 0.069s[0m
+[2019-08-28 16:06:15] [INFO] [32m[Stage-3/3] Handling Stage >>> [Publish header files] ...[0m
+[2019-08-28 16:06:16] [INFO] [32m[Stage-3/3] Publish header files takes : 1.154s[0m
+[2019-08-28 16:06:16] [INFO] [32m=========== Preprocess total takes : 1.362s[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_ParseCommType[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_util[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/bin/demo[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_dict_handle[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_UserDefinedType[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/output/test/test_ParseUserType[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_atomic.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_type_erasure.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest_main.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_contract.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_python27.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_serialization.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wserialization.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_date_time.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_noop.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_filesystem.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_iostreams.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log_setup.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_addr2line.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_unit_test_framework.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_context.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_regex.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_locale.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_log.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_exception.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_system.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_container.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/test/baidu_goodcoder_liuyuan21_test_ParseUserType_ut_app_test_ParseUserType.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_stacktrace_basic.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_chrono.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber_numa.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1l.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_util_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/test/baidu_goodcoder_liuyuan21_test_UserDefinedType_ut_app_test_UserDefinedType.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99l.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseUserType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_program_options.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_test_exec_monitor.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_random.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_fiber.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99f.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/gtest/output/lib/libgtest.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_coroutine.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_graph.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_prg_exec_monitor.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_wave.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_thread.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_tr1f.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_dict_handle_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_timer.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/glog/output/lib/libglog.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_UserDefinedType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/third-party/boost/output/lib/libboost_math_c99.a[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/test/baidu_goodcoder_liuyuan21_test_dict_handle_ut_app_test_dict_handle.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_demo_app_dict_handle.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/test/baidu_goodcoder_liuyuan21_test_util_ut_app_test_util.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/src/baidu_goodcoder_liuyuan21_test_ParseCommType_ut_app_dict_handle.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/demo/baidu_goodcoder_liuyuan21_demo_app_dictparse.cpp.o[0m
+[2019-08-28 16:06:16] [INFO] [32mAnalyzing CXX object : $OUT_ROOT/baidu/goodcoder/liuyuan21/test/baidu_goodcoder_liuyuan21_test_ParseCommType_ut_app_test_ParseCommType.cpp.o[0m
+[2019-08-28 16:06:17] [INFO] [32mCreate makefile successfully, use 3.595s[0m

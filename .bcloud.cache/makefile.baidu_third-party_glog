@@ -1,0 +1,45 @@
+.SILENT:
+
+#
+#makefile-self location, must be always on the top!!!
+#
+MAKEFILE_PATH_BAIDU_THIRD-PARTY_GLOG := $(word $(words $(MAKEFILE_LIST)), $(MAKEFILE_LIST))
+MAKEFILE_DIR_BAIDU_THIRD-PARTY_GLOG := $(shell cd $(dir $(MAKEFILE_PATH_BAIDU_THIRD-PARTY_GLOG)) && pwd)
+
+MAKEFILE_BAIDU_THIRD-PARTY_GLOG := 'imported'
+
+#
+#Global Configs
+#
+WORK_ROOT := $(shell cd $(MAKEFILE_DIR_BAIDU_THIRD-PARTY_GLOG)/../../../.. && pwd)
+GCC_PATH := /opt/compiler/gcc-4.8.2/bin
+
+#
+#import global configs
+#
+ifneq ($(MAKEFILE_CONFIG), 'imported')
+    include $(MAKEFILE_DIR_BAIDU_THIRD-PARTY_GLOG)/makefile.config
+endif
+
+baidu/third-party/glog_deps:\
+		$(WORK_ROOT)/bc_out/baidu/third-party/glog/output/lib/libglog.a\
+
+$(WORK_ROOT)/bc_out/baidu/third-party/glog/output/lib/libglog.a:$(WORK_ROOT)/baidu/third-party/glog/lib/libglog.a 
+	$(eval cd_cmd = cd $(WORK_ROOT))
+	$(eval mk_cmd = mkdir -p $(WORK_ROOT)/bc_out/baidu/third-party/glog/output/lib)
+	$(eval gcc_cmd = \
+	cp \
+		-f \
+		baidu/third-party/glog/lib/libglog.a \
+		bc_out/baidu/third-party/glog/output/lib/libglog.a)
+	$(call exec_cmd, $(cd_cmd));\
+	$(call exec_cmd, $(mk_cmd));\
+	$(call exec_cmd, $(gcc_cmd))
+
+	echo -e '\033[32m[OK]\033[0m $$WORK_ROOT/bc_out/baidu/third-party/glog/output/lib/libglog.a'
+
+
+
+#
+#import dependency modules
+#

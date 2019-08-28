@@ -1,0 +1,5 @@
+===DumpFlattenConfigs===
+baidu/goodcoder/liuyuan21@master	True	None
+    baidu/third-party/boost@boost_1-70-0	True	third-64/boost
+    baidu/third-party/gtest@v1.8	True	third-64/gtest
+    baidu/third-party/glog@glog_0.4.0-baidu-ee-common_0-4-0-0_GEN_PD_BL	True	third-64/glog

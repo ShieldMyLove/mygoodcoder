@@ -4,20 +4,20 @@
 WORKROOT('../../../')
 
 #platform, if not write PLATFORM('xxx') in BCLOUD file, default is 'centos4u3'
-#PLATFORM('centos4u3')
+#PLATFORM('centos6u3')
 
 #gcc version, default 'gcc'
 COMPILER('gcc482')
 
 #Preprocessor flags.
-#CPPFLAGS(r'-D_GNU_SOURCE -D__STDC_LIMIT_MACROS')
-#CPPFLAGS(r'-DVERSION=\"%s\"' % REPO_REVISION())
+CPPFLAGS(r'-D_GNU_SOURCE -D__STDC_LIMIT_MACROS')
+CPPFLAGS(r'-DVERSION=\"%s\"' % REPO_REVISION())
 
 #C flags.
 #CFLAGS('-g -pipe -W -Wall -fPIC')
 
 #C++ flags.
-#CXXFLAGS('-g -pipe -W -Wall -fPIC')
+CXXFLAGS('-g -pipe -W -Wall -fPIC -std=c++11')
 
 #IDL flags.
 #IDLFLAGS('--compack')
@@ -26,33 +26,38 @@ COMPILER('gcc482')
 #UBRPCFLAGS('--compack')
 
 #-I path
-INCPATHS('. ./include $INC')
+INCPATHS('. ./src ./src/test $INC')
 
 #libs which need to link with
-#LIBS('$OUT/lib/libliuyuan21.a')
-#LIBS('$OUT/so/libliuyuan21.so')
+#LIBS('$OUT/lib/libliuqiyu01.a')
+#LIBS('$OUT/so/libliuqiyu01.so')
 
 #link flags
-#LDFLAGS('-lpthread -lcrypto -lrt')
-
-#CONFIGS("baidu/bcloud-demo/hello-svn@hello-svn_1-0-2-1_PD_BL@git_tag")
-
+LDFLAGS('-lpthread -lcrypto -lrt')
+CONFIGS("baidu/third-party/boost@boost_1-70-0@git_branch")
+CONFIGS("baidu/third-party/gtest@v1.8@git_branch")
+CONFIGS("baidu/third-party/glog@glog_0.4.0-baidu-ee-common_0-4-0-0_GEN_PD_BL@git_tag")
 #user_sources=GLOB("*.c *.cpp *.cc *.idl")
 
 #release headers
-HEADERS('*.h', '$INC')
-HEADERS('*.hpp', '$INC')
-HEADERS('include/*.h', '$INC')
-HEADERS('include/*.hpp', '$INC')
+#HEADERS('src/*.h', '$INC')
+
 
 #release files except headers
 #OUTPUT('conf', '$OUT')
 
 #bin
-#Application('liuyuan21', Sources(user_sources))
+Application("demo", Sources(GLOB("src/*.cpp")), Sources(GLOB("demo/*.cpp")), 
+             Libraries("$WORK_ROOT/baidu/third-party/gtest/lib/libgtest.a"),Libraries("$WORK_ROOT/baidu/third-party/gtest/lib/libgtest_main.a"))
 
 #UT
-#UTApplication('liuyuan21', Sources(user_sources), UTArgs(''), UTOnServer(False))
+test_source = GLOB("test/*.cpp")
+#print test_source
+for test in test_source.split(" "):
+    output_name = os.path.basename(test).replace(".cpp","")
+    print output_name
+    UTApplication(output_name, Sources(GLOB("src/*.cpp")), Sources(test), UTArgs(''), UTOnServer(True), \
+               Libraries("$WORK_ROOT/baidu/third-party/gtest/lib/libgtest.a"),Libraries("$WORK_ROOT/baidu/third-party/gtest/lib/libgtest_main.a"))
 
 #.a
 #StaticLibrary('liuyuan21', Sources(user_sources))
